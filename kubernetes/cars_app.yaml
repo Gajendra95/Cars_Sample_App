@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: web-server
-        image: tombatchelor/cars_web:1.3
+        image: sreedocker123/carsweb:latest
         ports:
         - name: cars-web-port
           containerPort: 80
@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: app-server
-        image: tombatchelor/cars:1.15
+        image: sreedocker123/carsapp:latest
         ports:
         - name: cars-app-port
           containerPort: 8080
@@ -56,7 +56,7 @@ spec:
     spec:
       containers:
       - name: db-server
-        image: tombatchelor/carsdb:1.2
+        image: sreedocker123/carsdb:latest
         ports:
         - name: mysql
           containerPort: 3306
@@ -78,7 +78,7 @@ spec:
       serviceAccountName: prometheus
       containers:
       - name: prometheus
-        image: prom/prometheus:v2.10.0
+        image: sreedocker123/carsprometheus:latest
         args:
         - --config.file=/etc/prometheus/config.yaml
         ports:
@@ -110,7 +110,7 @@ spec:
     spec:
       containers:
       - name: jmeter
-        image: tombatchelor/carsloadgen:1.3
+        image: sreedocker123/carsloadgen:latest
 ---
 apiVersion: v1
 kind: Service
